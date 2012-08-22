@@ -174,5 +174,10 @@
 			<artifactId>${servlet.spec.artifactId}</artifactId>
 			<scope>provided</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.primefaces</groupId>
+			<artifactId>primefaces</artifactId>
+			<version>3.4.RC1</version>
+		</dependency>
 	</dependencies>
 </project>
