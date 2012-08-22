@@ -5,13 +5,6 @@
 
     <description>MyProject web.xml</description>
 
-    <!-- Use JSP views by default -->
-    <context-param>
-        <param-name>javax.faces.DEFAULT_SUFFIX</param-name>
-        <param-value>.jsp</param-value>
-    </context-param>
-
-    <!-- Facelets pages will use the .xhtml extension -->
     <context-param>
         <param-name>facelets.VIEW_MAPPINGS</param-name>
         <param-value>*.xhtml</param-value>
@@ -22,16 +15,14 @@
         <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
     </servlet>
 
-    <!-- Use prefix mapping for Facelets pages, e.g. http://localhost:8080/webapp/faces/mypage.jsf -->
     <servlet-mapping>
         <servlet-name>Faces Servlet</servlet-name>
-        <url-pattern>/faces/*</url-pattern>
+        <url-pattern>*.xhtml</url-pattern>
     </servlet-mapping>
 
     <!-- Welcome files -->
     <welcome-file-list>
-        <welcome-file>helloWorld.jsp</welcome-file>
-        <welcome-file>helloWorld.html</welcome-file>
+        <welcome-file>helloWorld.xhtml</welcome-file>
     </welcome-file-list>
 
     <!-- 

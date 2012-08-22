@@ -18,13 +18,13 @@
 */
 package org.apache.myfaces.test;
 
-/**
- * A typical simple backing bean, that is backed to <code>helloworld.jsp</code>
- * 
- */
+import javax.faces.bean.ApplicationScoped;
+import javax.faces.bean.ManagedBean;
+
+@ManagedBean(name="helloWorld")
+@ApplicationScoped
 public class HelloWorldController {
 
-    
     //properties
     private String name;
     
@@ -46,7 +46,6 @@ public class HelloWorldController {
      * Method that is backed to a submit button of a form.
      */
     public String send(){
-        //do real logic, return a string which will be used for the navigation system of JSF
-        return "success";
+        return "success?faces-redirect=true";
     }
 }

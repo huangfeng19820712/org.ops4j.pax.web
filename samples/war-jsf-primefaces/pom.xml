@@ -68,7 +68,7 @@
 						</Import-Package>
 						<Export-Package>!*</Export-Package>
 						<Bundle-Classpath>WEB-INF/classes</Bundle-Classpath>
-						<Web-ContextPath>war-jsf-sample</Web-ContextPath>
+						<Web-ContextPath>war-jsf-primefaces-sample</Web-ContextPath>
 						<Require-Bundle>
 							org.apache.myfaces.core.api,
 							org.apache.myfaces.core.impl 
