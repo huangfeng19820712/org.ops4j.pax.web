@@ -362,16 +362,18 @@
                 <version>2.12</version>
                 <configuration>
                     <includes>
-                        <include>**/*IntegrationTest.java</include>
+<!--                    <include>**/*IntegrationTest.java</include>  -->
+						<include>**/WarJSFPrimefacesIntegrationTest.java</include>
                     </includes>
                     <!-- This test will work if PAXWEB-154 and PAXWEB-123 
                         are fixed -->
+                <!-- 
                     <excludes>
                         <exclude>**/JspFilterIntegrationTest.java</exclude>
-                        <exclude>**/JettyWebIntegrationTest.java</exclude>
+                        <exclude>**/JettyWebIntegrationTest.java</exclude> -->
                         <!-- Test for PAXWEB-382 -->
-                        <exclude>**/WarJSFFaceletsIntegrationTest.java</exclude>
-                    </excludes>
+                <!--    <exclude>**/WarJSFFaceletsIntegrationTest.java</exclude>
+                    </excludes> -->
                     <systemPropertyVariables>
                         <ProjectVersion>${project.version}</ProjectVersion>
                         <MyFacesVersion>${jsf-myfaces.version}</MyFacesVersion>

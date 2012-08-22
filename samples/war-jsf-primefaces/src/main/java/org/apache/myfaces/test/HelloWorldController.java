@@ -18,11 +18,11 @@
 */
 package org.apache.myfaces.test;
 
-import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
 
 @ManagedBean(name="helloWorld")
-@ApplicationScoped
+@SessionScoped
 public class HelloWorldController {
 
     //properties
