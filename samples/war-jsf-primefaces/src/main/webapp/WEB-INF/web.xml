@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+    version="3.0">
+
+    <description>MyProject web.xml</description>
+
+    <!-- Use JSP views by default -->
+    <context-param>
+        <param-name>javax.faces.DEFAULT_SUFFIX</param-name>
+        <param-value>.jsp</param-value>
+    </context-param>
+
+    <!-- Facelets pages will use the .xhtml extension -->
+    <context-param>
+        <param-name>facelets.VIEW_MAPPINGS</param-name>
+        <param-value>*.xhtml</param-value>
+    </context-param>
+
+    <servlet>
+        <servlet-name>Faces Servlet</servlet-name>
+        <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+    </servlet>
+
+    <!-- Use prefix mapping for Facelets pages, e.g. http://localhost:8080/webapp/faces/mypage.jsf -->
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/faces/*</url-pattern>
+    </servlet-mapping>
+
+    <!-- Welcome files -->
+    <welcome-file-list>
+        <welcome-file>helloWorld.jsp</welcome-file>
+        <welcome-file>helloWorld.html</welcome-file>
+    </welcome-file-list>
+
+    <!-- 
+       FIXME This should not be required, but Jetty does not pick up the listener from a TLD
+       at the moment.
+     -->
+    <listener>
+        <listener-class>org.apache.myfaces.webapp.StartupServletContextListener</listener-class>
+    </listener>
+
+</web-app>
